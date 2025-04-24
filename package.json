@@ -1,0 +1,17 @@
+
+{
+  "name": "admin-timetable-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run admin\"",
+    "server": "node backend/index.js",
+    "admin": "npm run start --prefix admin-frontend"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.2"
+  }
+}
